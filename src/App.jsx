@@ -4,6 +4,9 @@ import { ArrowLeft, Target, ImageIcon, BookOpen, ChevronDown, ChevronRight, Magn
 import MagnetismoView from './views/topics/MagnetismoView';
 import FerromagnetismoView from './views/topics/FerromagnetismoView';
 import ElectroimanesView from './views/topics/ElectroimanesView';
+import CampoMagneticoView from './views/topics/CampoMagneticoView';
+import FlujoMagneticoView from './views/topics/FlujoMagneticoView';
+import FuerzaLorentzView from './views/topics/FuerzaLorentzView';
 import ElectromagnetismoView from './views/topics/ElectromagnetismoView';
 import InduccionView from './views/topics/InduccionView';
 
@@ -106,11 +109,50 @@ function Home() {
             </Link>
 
             <Link
+              to="/campo-magnetico"
+              className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-colors cursor-pointer group"
+            >
+              <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                <span className="text-primary-500/50 font-black">4.</span> Campo Magnético
+              </h3>
+              <p className="text-sm text-slate-300 mb-4 flex-grow">Líneas de fuerza e interacciones mecánicas.</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Nuevo</span>
+              </div>
+            </Link>
+
+            <Link
+              to="/flujo-magnetico"
+              className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-colors cursor-pointer group"
+            >
+              <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                <span className="text-primary-500/50 font-black">5.</span> Flujo Magnético
+              </h3>
+              <p className="text-sm text-slate-300 mb-4 flex-grow">Webers, Teslas y eficiencia en transformadores.</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Nuevo</span>
+              </div>
+            </Link>
+
+            <Link
+              to="/fuerza-lorentz"
+              className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-colors cursor-pointer group"
+            >
+              <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                <span className="text-primary-500/50 font-black">6.</span> Fuerza de Lorentz
+              </h3>
+              <p className="text-sm text-slate-300 mb-4 flex-grow">El principio fundamental del par motor.</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Nuevo</span>
+              </div>
+            </Link>
+
+            <Link
               to="/electromagnetismo"
               className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-colors cursor-pointer group"
             >
               <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                <span className="text-primary-500/50 font-black">4.</span> Electromagnetismo
+                <span className="text-primary-500/50 font-black">7.</span> Electromagnetismo
               </h3>
               <p className="text-sm text-slate-300 mb-4 flex-grow">Relación entre corriente y magnetismo, solenoides y motores.</p>
               <div className="flex flex-wrap gap-2">
@@ -123,7 +165,7 @@ function Home() {
               className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-colors cursor-pointer group"
             >
               <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                <span className="text-primary-500/50 font-black">5.</span> Inducción
+                <span className="text-primary-500/50 font-black">8.</span> Inducción
               </h3>
               <p className="text-sm text-slate-300 mb-4 flex-grow">Leyes de Faraday y Lenz, generadores y transformadores.</p>
               <div className="flex flex-wrap gap-2">
@@ -197,41 +239,14 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/magnetismo" element={
-          <div className="min-h-screen bg-slate-950 p-4 md:p-8">
-            <div className="max-w-5xl mx-auto">
-              <AppTopicWrapper view={MagnetismoView} />
-            </div>
-          </div>
-        } />
-        <Route path="/ferromagnetismo" element={
-          <div className="min-h-screen bg-slate-950 p-4 md:p-8">
-            <div className="max-w-5xl mx-auto">
-              <AppTopicWrapper view={FerromagnetismoView} />
-            </div>
-          </div>
-        } />
-        <Route path="/electroimanes" element={
-          <div className="min-h-screen bg-slate-950 p-4 md:p-8">
-            <div className="max-w-5xl mx-auto">
-              <AppTopicWrapper view={ElectroimanesView} />
-            </div>
-          </div>
-        } />
-        <Route path="/electromagnetismo" element={
-          <div className="min-h-screen bg-slate-950 p-4 md:p-8">
-            <div className="max-w-5xl mx-auto">
-              <AppTopicWrapper view={ElectromagnetismoView} />
-            </div>
-          </div>
-        } />
-        <Route path="/induccion" element={
-          <div className="min-h-screen bg-slate-950 p-4 md:p-8">
-            <div className="max-w-5xl mx-auto">
-              <AppTopicWrapper view={InduccionView} />
-            </div>
-          </div>
-        } />
+        <Route path="/magnetismo" element={<AppTopicWrapper view={MagnetismoView} />} />
+        <Route path="/ferromagnetismo" element={<AppTopicWrapper view={FerromagnetismoView} />} />
+        <Route path="/electroimanes" element={<AppTopicWrapper view={ElectroimanesView} />} />
+        <Route path="/campo-magnetico" element={<AppTopicWrapper view={CampoMagneticoView} />} />
+        <Route path="/flujo-magnetico" element={<AppTopicWrapper view={FlujoMagneticoView} />} />
+        <Route path="/fuerza-lorentz" element={<AppTopicWrapper view={FuerzaLorentzView} />} />
+        <Route path="/electromagnetismo" element={<AppTopicWrapper view={ElectromagnetismoView} />} />
+        <Route path="/induccion" element={<AppTopicWrapper view={InduccionView} />} />
       </Routes>
     </Router>
   );
