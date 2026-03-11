@@ -77,7 +77,7 @@ const ElectroimanesView = ({ onBack }) => {
 
       {/* 1. Objetivo de Aprendizaje */}
       <CollapsibleSection title="Objetivo de Aprendizaje" icon={Target} defaultOpen={true}>
-        <p className="text-slate-300 leading-relaxed text-lg text-center font-medium max-w-3xl mx-auto">
+        <p className="text-slate-300 leading-relaxed text-lg text-justify font-medium max-w-3xl mx-auto">
           Analizar el funcionamiento de <span className="text-white font-bold">solenoides y bobinas de accionamiento</span> para realizar el mantenimiento de contactores, frenos electromagnéticos y válvulas de control.
         </p>
       </CollapsibleSection>
@@ -86,12 +86,12 @@ const ElectroimanesView = ({ onBack }) => {
       <CollapsibleSection title="Importancia para el Técnico" icon={Cpu}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="space-y-4">
-            <p className="text-slate-300 leading-relaxed text-lg">
+            <p className="text-slate-300 leading-relaxed text-lg text-justify">
               El electroimán es el componente más común en los sistemas de control industrial. El técnico de automatización y control lo utiliza a diario en <span className="text-primary-400 font-bold">relés y solenoides</span>.
             </p>
             <div className="p-4 bg-orange-500/10 border border-orange-500/30 rounded-2xl flex items-start gap-3">
               <AlertTriangle className="text-orange-400 w-6 h-6 shrink-0 mt-1" />
-              <p className="text-sm text-slate-300 italic">
+              <p className="text-sm text-slate-300 italic text-justify">
                 Una mala conexión o un voltaje incorrecto puede causar que el núcleo no "pegue" bien, generando un arco eléctrico que destruye los contactos.
               </p>
             </div>
@@ -113,14 +113,14 @@ const ElectroimanesView = ({ onBack }) => {
         <div className="space-y-8">
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="flex-1 space-y-6">
-              <p className="text-slate-300 leading-relaxed text-lg">
+              <p className="text-slate-300 leading-relaxed text-lg text-justify">
                 Un electroimán genera magnetismo mediante el paso de corriente por un conductor enrollado. Su fuerza depende de dos factores críticos:
               </p>
               <div className="bg-slate-900/80 p-6 rounded-[2rem] border border-primary-500/20 text-center shadow-inner">
                 <span className="text-3xl font-black text-primary-400 font-mono tracking-widest uppercase">FMM = N · I</span>
                 <p className="text-xs text-slate-500 mt-2 uppercase tracking-[0.2em] font-bold">N: Número de Espiras | I: Intensidad (Ampers)</p>
               </div>
-              <p className="text-slate-300 leading-relaxed">
+              <p className="text-slate-300 leading-relaxed text-justify">
                 Si un solenoide pierde fuerza, generalmente es por un <span className="text-red-400 font-bold">cortocircuito entre espiras</span> que reduce el número efectivo de vueltas, o por una caída de tensión en la línea.
               </p>
             </div>
@@ -144,7 +144,7 @@ const ElectroimanesView = ({ onBack }) => {
              <h3 className="text-white font-black text-xl mb-2 flex items-center gap-2">
                 <AlertTriangle className="text-primary-400" /> El Anillo de Desfasaje
              </h3>
-             <p className="text-slate-300 leading-relaxed">
+             <p className="text-slate-300 leading-relaxed text-justify">
                 En electroimanes de <span className="text-primary-300 font-bold uppercase">Corriente Alterna</span>, el flujo pasa por cero 100 o 120 veces por segundo. Sin la espira de sombra (un pequeño anillo de cobre), el núcleo se soltaría y volvería a pegar en cada ciclo.
              </p>
           </div>
@@ -153,7 +153,7 @@ const ElectroimanesView = ({ onBack }) => {
              <div className="p-8 glass-morphism rounded-3xl border border-red-500/10 space-y-4">
                 <h4 className="text-red-400 font-bold flex items-center gap-2">Síntoma de Falla:</h4>
                 <p className="text-slate-200 text-3xl font-black italic tracking-tighter">"ZUMBIDO VIOLENTO"</p>
-                <p className="text-slate-400 text-sm leading-relaxed">
+                <p className="text-slate-400 text-sm leading-relaxed text-justify">
                    Si el anillo de cobre se rompe, el electroimán vibrará violentamente a 100 o 120 Hz, provocando un ruido ensordecedor y el desgaste prematuro de las piezas mecánicas de impacto.
                 </p>
              </div>
@@ -184,7 +184,7 @@ const ElectroimanesView = ({ onBack }) => {
             </div>
             <div className="space-y-3">
               <h2 className="text-3xl font-black text-white leading-tight">Mantenimiento de Precisión</h2>
-              <p className="text-slate-400 text-lg leading-relaxed max-w-2xl">
+              <p className="text-slate-400 text-lg leading-relaxed max-w-2xl text-justify">
                 Recuerde: Limpiar las caras de los núcleos de los contactores es vital para evitar ruidos y sobrecalentamientos por falta de cierre hermético del circuito magnético.
               </p>
             </div>

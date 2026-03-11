@@ -64,7 +64,7 @@ const InduccionView = ({ onBack }) => {
 
       {/* 1. Objetivo de Aprendizaje */}
       <CollapsibleSection title="Objetivo de Aprendizaje" icon={Target} defaultOpen={true}>
-        <p className="text-slate-300 leading-relaxed text-lg">
+        <p className="text-slate-300 leading-relaxed text-lg text-justify">
           Comprender cómo un campo magnético variable puede inducir una fuerza electromotriz (FEM) en un conductor, principio fundamental de generadores y transformadores.
         </p>
       </CollapsibleSection>
@@ -80,7 +80,7 @@ const InduccionView = ({ onBack }) => {
         <div className="bg-slate-950 rounded-[23px] p-8 relative overflow-hidden flex flex-col md:flex-row gap-8 items-center">
           <div className="flex-1 space-y-4 z-10 text-center md:text-left">
             <h2 className="text-3xl font-black text-white">Próximamente</h2>
-            <p className="text-slate-300 text-lg leading-relaxed">
+            <p className="text-slate-300 text-lg leading-relaxed text-justify">
               Estamos desarrollando el contenido completo para esta sección.
             </p>
           </div>

@@ -64,14 +64,14 @@ const MagnetismoView = ({ onBack }) => {
 
       {/* 1. Objetivo de Aprendizaje */}
       <CollapsibleSection title="Objetivo de Aprendizaje" icon={Target} defaultOpen={true}>
-        <p className="text-slate-300 leading-relaxed text-lg">
+        <p className="text-slate-300 leading-relaxed text-lg text-justify">
           Comprender la naturaleza de los campos magnéticos y su interacción con conductores eléctricos para diagnosticar fallas de atracción, repulsión y blindaje en equipos electromecánicos.
         </p>
       </CollapsibleSection>
 
       {/* 2. ¿Por qué es importante para el técnico? */}
       <CollapsibleSection title="¿Por qué es importante para el técnico?" icon={Zap}>
-        <p className="text-slate-300 leading-relaxed text-lg">
+        <p className="text-slate-300 leading-relaxed text-lg text-justify">
           Para un técnico de mantenimiento, el magnetismo no es solo "imanes". Es la base para entender por qué un relé se pega, por qué un rodamiento se magnetiza y causa erosión eléctrica, o por qué los cables de potencia deben estar bien peinados en las bandejas. Si no entiendes el magnetismo, no entiendes cómo se transfiere la energía sin contacto físico. Los técnicos de bobinado y mantenimiento preventivo son quienes más aplican estos conceptos para detectar fugas de flujo o magnetismo remanente en ejes de motores.
         </p>
       </CollapsibleSection>
@@ -79,10 +79,10 @@ const MagnetismoView = ({ onBack }) => {
       {/* 3. Desarrollo Técnico: El Campo en la Práctica */}
       <CollapsibleSection title="El Campo en la Práctica" icon={Magnet}>
         <div className="space-y-6">
-          <p className="text-slate-300 leading-relaxed text-lg">
+          <p className="text-slate-300 leading-relaxed text-lg text-justify">
             El magnetismo es una propiedad física mediante la cual ciertos materiales ejercen fuerzas de atracción o repulsión. En el ámbito del módulo, nos interesa el magnetismo como el vehículo que permite la conversión de energía eléctrica en mecánica (motores) y viceversa (generadores).
           </p>
-          <p className="text-slate-300 leading-relaxed text-lg">
+          <p className="text-slate-300 leading-relaxed text-lg text-justify">
             Todo campo magnético se visualiza mediante líneas de inducción. Un punto crítico para el técnico es entender que estas líneas siempre buscan el camino de menor resistencia (reluctancia). En una máquina eléctrica, si el entrehierro (el espacio de aire entre el estator y el rotor) es irregular, el campo magnético será asimétrico, provocando vibraciones mecánicas severas y desgaste prematuro en los descansos.
           </p>
           <ImagePlaceholder
@@ -96,10 +96,10 @@ const MagnetismoView = ({ onBack }) => {
       {/* 4. Interacción y Polaridad */}
       <CollapsibleSection title="Interacción y Polaridad" icon={BookOpen}>
         <div className="space-y-6">
-          <p className="text-slate-300 leading-relaxed text-lg">
+          <p className="text-slate-300 leading-relaxed text-lg text-justify">
             La regla de oro en terreno es simple: polos iguales se repelen, polos opuestos se atraen. Sin embargo, en máquinas de corriente continua, la inversión de estos polos (mediante la conmutación) es lo que permite que el motor siga girando. Un técnico que sepa identificar la polaridad magnética puede determinar si un devanado ha sido conectado al revés sin necesidad de desarmar toda la máquina, simplemente usando una brújula o un sensor de efecto Hall.
           </p>
-          <p className="text-slate-300 leading-relaxed text-lg bg-primary-500/5 p-6 rounded-2xl border border-primary-500/20 italic">
+          <p className="text-slate-300 leading-relaxed text-lg bg-primary-500/5 p-6 rounded-2xl border border-primary-500/20 italic text-justify">
             Es vital considerar el magnetismo remanente. En muchos contactores o frenos electromagnéticos, el material queda ligeramente magnetizado después de quitar la corriente. Si el técnico no conoce este fenómeno, podría confundir un problema mecánico (un resorte vencido) con un problema de histéresis del material del núcleo.
           </p>
           <ImagePlaceholder

@@ -64,14 +64,14 @@ const ElectromagnetismoView = ({ onBack }) => {
 
       {/* 1. Objetivo de Aprendizaje */}
       <CollapsibleSection title="Objetivo de Aprendizaje" icon={Target} defaultOpen={true}>
-        <p className="text-slate-300 leading-relaxed text-lg">
+        <p className="text-slate-300 leading-relaxed text-lg text-justify">
           Analizar la relación entre la corriente eléctrica y la generación de campos magnéticos para comprender el funcionamiento de solenoides, motores y transformadores.
         </p>
       </CollapsibleSection>
 
       {/* 2. Conceptos Fundamentales */}
       <CollapsibleSection title="Magnetismo y Electricidad" icon={Zap}>
-        <p className="text-slate-300 leading-relaxed text-lg">
+        <p className="text-slate-300 leading-relaxed text-lg text-justify">
           El electromagnetismo es la rama de la física que estudia la relación entre la electricidad y el magnetismo. Hans Christian Ørsted descubrió que una corriente eléctrica crea un campo magnético a su alrededor. Este fenómeno es la base de casi toda la tecnología eléctrica moderna.
         </p>
       </CollapsibleSection>
@@ -87,7 +87,7 @@ const ElectromagnetismoView = ({ onBack }) => {
         <div className="bg-slate-950 rounded-[23px] p-8 relative overflow-hidden flex flex-col md:flex-row gap-8 items-center">
           <div className="flex-1 space-y-4 z-10 text-center md:text-left">
             <h2 className="text-3xl font-black text-white">Próximamente</h2>
-            <p className="text-slate-300 text-lg leading-relaxed">
+            <p className="text-slate-300 text-lg leading-relaxed text-justify">
               Estamos desarrollando el contenido completo para esta sección.
             </p>
           </div>

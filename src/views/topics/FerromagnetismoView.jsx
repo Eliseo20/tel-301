@@ -78,7 +78,7 @@ const FerromagnetismoView = ({ onBack }) => {
 
       {/* 1. Objetivo de Aprendizaje */}
       <CollapsibleSection title="Objetivo de Aprendizaje" icon={Target} defaultOpen={true}>
-        <p className="text-slate-300 leading-relaxed text-lg">
+        <p className="text-slate-300 leading-relaxed text-lg text-justify">
           Identificar el comportamiento de materiales como el <span className="text-white font-bold">hierro, cobalto y níquel</span> bajo la influencia de campos magnéticos para seleccionar repuestos adecuados y diagnosticar fallas por saturación o fatiga magnética.
         </p>
       </CollapsibleSection>
@@ -86,11 +86,11 @@ const FerromagnetismoView = ({ onBack }) => {
       {/* 2. Importancia para el Técnico */}
       <CollapsibleSection title="Importancia para el Técnico" icon={Zap}>
         <div className="space-y-4">
-          <p className="text-slate-300 leading-relaxed text-lg">
+          <p className="text-slate-300 leading-relaxed text-lg text-justify">
             En el ejercicio diario, un técnico de mantenimiento eléctrico o de bobinado debe entender que no cualquier acero sirve para un núcleo. Si reemplazas un perno o una chapa original por una de acero común, puedes provocar que el equipo se <span className="text-red-400 font-bold">sobrecaliente en minutos</span>.
           </p>
           <div className="p-6 bg-primary-500/5 rounded-2xl border border-primary-500/20">
-            <p className="text-slate-300 leading-relaxed">
+            <p className="text-slate-300 leading-relaxed text-justify">
               Los técnicos que trabajan con <span className="text-primary-400 font-bold">servomotores y variadores de frecuencia</span> son quienes más deben vigilar estas características, ya que la respuesta del material afecta directamente el control de precisión de la máquina.
             </p>
           </div>
@@ -100,7 +100,7 @@ const FerromagnetismoView = ({ onBack }) => {
       {/* 3. Desarrollo Técnico: Permeabilidad y Saturación */}
       <CollapsibleSection title="Permeabilidad y Saturación" icon={Magnet}>
         <div className="space-y-6">
-          <p className="text-slate-300 leading-relaxed text-lg">
+          <p className="text-slate-300 leading-relaxed text-lg text-justify">
             Los materiales ferromagnéticos son la "autopista" del flujo magnético. Poseen una <span className="text-white font-bold">alta permeabilidad (μ)</span>, lo que significa que permiten que las líneas de campo pasen por ellos con mucha facilidad en comparación con el aire.
           </p>
           
@@ -109,7 +109,7 @@ const FerromagnetismoView = ({ onBack }) => {
               <h3 className="text-primary-400 font-bold flex items-center gap-2">
                 <Activity className="w-5 h-5" /> El Límite de Saturación
               </h3>
-              <p className="text-slate-300 leading-relaxed">
+              <p className="text-slate-300 leading-relaxed text-justify">
                 Cuando un núcleo llega a la saturación, por más que aumentes la corriente en la bobina, el flujo ya no aumenta. Para un técnico, esto se traduce en una pérdida drástica de eficiencia y un aumento peligroso de la corriente (amperaje).
               </p>
             </div>
@@ -131,7 +131,7 @@ const FerromagnetismoView = ({ onBack }) => {
       {/* 4. La Histéresis y sus Consecuencias */}
       <CollapsibleSection title="La Histéresis y sus Consecuencias" icon={BookOpen}>
         <div className="space-y-6">
-          <p className="text-slate-300 leading-relaxed text-lg">
+          <p className="text-slate-300 leading-relaxed text-lg text-justify">
             La histéresis es el "retraso" que sufre el material al magnetizarse y desmagnetizarse. Parte de la energía eléctrica se queda "atrapada" en el núcleo en forma de <span className="text-primary-400 font-bold">magnetismo remanente</span>.
           </p>
           
@@ -145,16 +145,16 @@ const FerromagnetismoView = ({ onBack }) => {
                   </div>
                   <div>
                     <span className="text-white font-bold block">Sobrecalentamiento del núcleo</span>
-                    <span className="text-slate-400 text-sm">La energía se disipa como calor, degradando el barniz aislante.</span>
+                    <span className="text-slate-400 text-sm italic text-justify block mt-1">La energía se disipa como calor, degradando el barniz aislante.</span>
                   </div>
                 </li>
-                <li className="flex gap-4 p-4 bg-white/5 rounded-xl border border-white/5 group hover:border-primary-500/30 transition-all">
+		<li className="flex gap-4 p-4 bg-white/5 rounded-xl border border-white/5 group hover:border-primary-500/30 transition-all">
                   <div className="w-12 h-12 rounded-lg bg-yellow-500/20 text-yellow-400 flex items-center justify-center shrink-0">
                     <Activity className="w-6 h-6" />
                   </div>
                   <div>
                     <span className="text-white font-bold block">Vibración y Ruido (Zumbido)</span>
-                    <span className="text-slate-400 text-sm">Magnetostricción: el material cambia de forma microscópicamente.</span>
+                    <span className="text-slate-400 text-sm italic text-justify block mt-1">Magnetostricción: el material cambia de forma microscópicamente.</span>
                   </div>
                 </li>
                 <li className="flex gap-4 p-4 bg-white/5 rounded-xl border border-white/5 group hover:border-primary-500/30 transition-all">
@@ -163,7 +163,7 @@ const FerromagnetismoView = ({ onBack }) => {
                   </div>
                   <div>
                     <span className="text-white font-bold block">Pérdida de Torque</span>
-                    <span className="text-slate-400 text-sm">Reduce la fuerza del par motor, obligando a consumir más corriente.</span>
+                    <span className="text-slate-400 text-sm italic text-justify block mt-1">Reduce la fuerza del par motor, obligando a consumir más corriente.</span>
                   </div>
                 </li>
               </ul>
