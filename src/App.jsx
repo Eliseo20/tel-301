@@ -43,7 +43,7 @@ function App() {
               Plataforma de Aprendizaje
             </p>
             <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight">
-              Módulo TEL-301
+              Plataforma de Mantenimiento
             </h1>
           </div>
         </header>
@@ -131,9 +131,9 @@ function App() {
           </button>
           <div className={`transition-all duration-700 ease-in-out overflow-hidden ${isOpen ? 'opacity-100 max-h-[5000px] mt-4' : 'opacity-0 max-h-0'}`}>
             <div className="glass-morphism rounded-[2.5rem] p-8 md:p-14 border border-primary-500/10">
-              <h3 className="text-xl font-bold text-white mb-4">Metodología TEL-301</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Metodología de Aprendizaje</h3>
               <p className="text-slate-300 mb-4 text-lg">
-                El módulo TEL-301 se enfoca en el aprendizaje práctico-teórico mediante la visualización de fenómenos físicos y su aplicación directa en el campo del mantenimiento industrial. Cada lección incluye:
+                El material se enfoca en el aprendizaje práctico-teórico mediante la visualización de fenómenos físicos y su aplicación directa en el campo del mantenimiento industrial. Cada lección incluye:
               </p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-400">
                 <li className="flex items-center gap-2 bg-white/5 p-4 rounded-xl border border-white/5">
@@ -153,11 +153,11 @@ function App() {
             <div className="flex-1 space-y-4 z-10">
               <h2 className="text-3xl font-black text-white">Material en Desarrollo</h2>
               <p className="text-slate-300 text-lg">
-                Estamos cargando los temas de la Unidad 1. Mantente atento a las actualizaciones regulares del repositorio.
+                Estamos cargando los temas de la Unidad 1. Mantente atento a las actualizaciones regulares.
               </p>
             </div>
             <div className="z-10 bg-primary-500/20 p-6 rounded-2xl border border-primary-500/30">
-              <p className="text-primary-300 font-bold text-center">TEL-301 - Framework UI</p>
+              <p className="text-primary-300 font-bold text-center">Framework UI</p>
             </div>
             <div className="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-primary-500/20 blur-[100px] rounded-full pointer-events-none"></div>
           </div>
