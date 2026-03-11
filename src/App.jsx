@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { HashRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Target, ImageIcon, BookOpen, ChevronDown, ChevronRight, Magnet } from 'lucide-react';
 import MagnetismoView from './views/topics/MagnetismoView';
+import FerromagnetismoView from './views/topics/FerromagnetismoView';
+import ElectroimanesView from './views/topics/ElectroimanesView';
 import ElectromagnetismoView from './views/topics/ElectromagnetismoView';
 import InduccionView from './views/topics/InduccionView';
 
@@ -78,15 +80,41 @@ function Home() {
             </Link>
 
             <Link
+              to="/ferromagnetismo"
+              className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-colors cursor-pointer group"
+            >
+              <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                <span className="text-primary-500/50 font-black">2.</span> Ferromagnetismo
+              </h3>
+              <p className="text-sm text-slate-300 mb-4 flex-grow">Permeabilidad, saturación y curvas de histéresis en materiales técnicos.</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Esencial</span>
+              </div>
+            </Link>
+
+            <Link
+              to="/electroimanes"
+              className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-colors cursor-pointer group"
+            >
+              <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                <span className="text-primary-500/50 font-black">3.</span> Electroimanes
+              </h3>
+              <p className="text-sm text-slate-300 mb-4 flex-grow">Funcionamiento de solenoides, FMM y la importancia de la espira de sombra.</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Nuevo</span>
+              </div>
+            </Link>
+
+            <Link
               to="/electromagnetismo"
               className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-colors cursor-pointer group"
             >
               <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                <span className="text-primary-500/50 font-black">2.</span> Electromagnetismo
+                <span className="text-primary-500/50 font-black">4.</span> Electromagnetismo
               </h3>
               <p className="text-sm text-slate-300 mb-4 flex-grow">Relación entre corriente y magnetismo, solenoides y motores.</p>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Nuevo</span>
+                <span className="bg-white/5 text-slate-500 px-2 py-1 rounded text-xs border border-white/10 italic">Próximamente</span>
               </div>
             </Link>
 
@@ -95,11 +123,11 @@ function Home() {
               className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-colors cursor-pointer group"
             >
               <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                <span className="text-primary-500/50 font-black">3.</span> Inducción
+                <span className="text-primary-500/50 font-black">5.</span> Inducción
               </h3>
               <p className="text-sm text-slate-300 mb-4 flex-grow">Leyes de Faraday y Lenz, generadores y transformadores.</p>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Nuevo</span>
+                <span className="bg-white/5 text-slate-500 px-2 py-1 rounded text-xs border border-white/10 italic">Próximamente</span>
               </div>
             </Link>
           </div>
@@ -173,6 +201,20 @@ function App() {
           <div className="min-h-screen bg-slate-950 p-4 md:p-8">
             <div className="max-w-5xl mx-auto">
               <AppTopicWrapper view={MagnetismoView} />
+            </div>
+          </div>
+        } />
+        <Route path="/ferromagnetismo" element={
+          <div className="min-h-screen bg-slate-950 p-4 md:p-8">
+            <div className="max-w-5xl mx-auto">
+              <AppTopicWrapper view={FerromagnetismoView} />
+            </div>
+          </div>
+        } />
+        <Route path="/electroimanes" element={
+          <div className="min-h-screen bg-slate-950 p-4 md:p-8">
+            <div className="max-w-5xl mx-auto">
+              <AppTopicWrapper view={ElectroimanesView} />
             </div>
           </div>
         } />
