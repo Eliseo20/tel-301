@@ -1,32 +1,12 @@
 import React, { useState } from 'react';
+import { HashRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Target, ImageIcon, BookOpen, ChevronDown, ChevronRight, Magnet } from 'lucide-react';
 import MagnetismoView from './views/topics/MagnetismoView';
+import ElectromagnetismoView from './views/topics/ElectromagnetismoView';
+import InduccionView from './views/topics/InduccionView';
 
-const ImagePlaceholder = ({ title, height = "h-48" }) => (
-  <div className={`w-full ${height} bg-slate-900/60 border-2 border-dashed border-primary-500/30 rounded-2xl flex flex-col items-center justify-center text-slate-500 hover:border-primary-500/60 hover:text-primary-400 hover:bg-slate-900/80 transition-all cursor-pointer group mt-4 mb-2`}>
-    <ImageIcon className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform" />
-    <p className="text-sm font-medium uppercase tracking-widest">{title}</p>
-    <p className="text-xs mt-1 opacity-60">(Espacio para imagen)</p>
-  </div>
-);
-
-function App() {
-  const [currentView, setCurrentView] = useState('home');
+function Home() {
   const [isOpen, setIsOpen] = useState(false);
-
-  const handleBack = () => {
-    setCurrentView('home');
-  };
-
-  if (currentView === 'magnetismo') {
-    return (
-      <div className="min-h-screen bg-slate-950 p-4 md:p-8">
-        <div className="max-w-5xl mx-auto">
-          <MagnetismoView onBack={handleBack} />
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen bg-slate-950 p-4 md:p-8">
@@ -56,13 +36,13 @@ function App() {
               <p className="text-slate-300 leading-relaxed text-lg">
                 Aquí encontrarás todo el material didáctico estructurado por unidades para el diagnóstico y mantenimiento de equipos electromecánicos.
               </p>
-              <button
-                onClick={() => setCurrentView('magnetismo')}
-                className="group flex items-center gap-3 bg-primary-600 hover:bg-primary-500 text-white px-6 py-4 rounded-2xl font-bold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-primary-500/20"
+              <Link
+                to="/magnetismo"
+                className="group inline-flex items-center gap-3 bg-primary-600 hover:bg-primary-500 text-white px-6 py-4 rounded-2xl font-bold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-primary-500/20"
               >
                 <Magnet className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                 Empezar Tema 1: Magnetismo
-              </button>
+              </Link>
             </div>
 
             <div className="bg-slate-900/60 p-6 rounded-2xl border border-white/5 h-full">
@@ -82,8 +62,8 @@ function App() {
         <section>
           <h2 className="text-2xl font-bold text-white mb-6">Contenidos de la Unidad 1</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div
-              onClick={() => setCurrentView('magnetismo')}
+            <Link
+              to="/magnetismo"
               className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-colors cursor-pointer group"
             >
               <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
@@ -95,22 +75,33 @@ function App() {
                 <span className="bg-white/5 text-slate-300 px-2 py-1 rounded text-xs border border-white/10">Campo Magnético</span>
                 <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Esencial</span>
               </div>
-            </div>
+            </Link>
 
-            {/* Marcadores de posición para otros temas */}
-            <div className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col opacity-50 grayscale">
+            <Link
+              to="/electromagnetismo"
+              className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-colors cursor-pointer group"
+            >
               <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                <span className="text-slate-500 font-black">2.</span> Electromagnetismo
+                <span className="text-primary-500/50 font-black">2.</span> Electromagnetismo
               </h3>
-              <p className="text-sm text-slate-300 mb-4 flex-grow">Próximamente disponible...</p>
-            </div>
+              <p className="text-sm text-slate-300 mb-4 flex-grow">Relación entre corriente y magnetismo, solenoides y motores.</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Nuevo</span>
+              </div>
+            </Link>
 
-            <div className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col opacity-50 grayscale">
+            <Link
+              to="/induccion"
+              className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-colors cursor-pointer group"
+            >
               <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                <span className="text-slate-500 font-black">3.</span> Inducción
+                <span className="text-primary-500/50 font-black">3.</span> Inducción
               </h3>
-              <p className="text-sm text-slate-300 mb-4 flex-grow">Próximamente disponible...</p>
-            </div>
+              <p className="text-sm text-slate-300 mb-4 flex-grow">Leyes de Faraday y Lenz, generadores y transformadores.</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Nuevo</span>
+              </div>
+            </Link>
           </div>
         </section>
 
@@ -157,7 +148,7 @@ function App() {
               </p>
             </div>
             <div className="z-10 bg-primary-500/20 p-6 rounded-2xl border border-primary-500/30">
-              <p className="text-primary-300 font-bold text-center">Framework UI</p>
+              <p className="text-primary-300 font-bold text-center">TEL-301</p>
             </div>
             <div className="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-primary-500/20 blur-[100px] rounded-full pointer-events-none"></div>
           </div>
@@ -168,5 +159,40 @@ function App() {
   );
 }
 
+function AppTopicWrapper({ view: View }) {
+  const navigate = useNavigate();
+  return <View onBack={() => navigate('/')} />;
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/magnetismo" element={
+          <div className="min-h-screen bg-slate-950 p-4 md:p-8">
+            <div className="max-w-5xl mx-auto">
+              <AppTopicWrapper view={MagnetismoView} />
+            </div>
+          </div>
+        } />
+        <Route path="/electromagnetismo" element={
+          <div className="min-h-screen bg-slate-950 p-4 md:p-8">
+            <div className="max-w-5xl mx-auto">
+              <AppTopicWrapper view={ElectromagnetismoView} />
+            </div>
+          </div>
+        } />
+        <Route path="/induccion" element={
+          <div className="min-h-screen bg-slate-950 p-4 md:p-8">
+            <div className="max-w-5xl mx-auto">
+              <AppTopicWrapper view={InduccionView} />
+            </div>
+          </div>
+        } />
+      </Routes>
+    </Router>
+  );
+}
 
 export default App;
