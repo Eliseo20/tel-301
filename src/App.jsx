@@ -7,8 +7,20 @@ import ElectroimanesView from './views/topics/ElectroimanesView';
 import CampoMagneticoView from './views/topics/CampoMagneticoView';
 import FlujoMagneticoView from './views/topics/FlujoMagneticoView';
 import FuerzaLorentzView from './views/topics/FuerzaLorentzView';
-import ElectromagnetismoView from './views/topics/ElectromagnetismoView';
-import InduccionView from './views/topics/InduccionView';
+import LeyOhmMagneticaView from './views/topics/LeyOhmMagneticaView';
+import SeguridadMagneticaView from './views/topics/SeguridadMagneticaView';
+import LeyGaussView from './views/topics/LeyGaussView';
+
+// Importación de miniaturas
+import thumbMagnetismo from './assets/thumbnails/thumb_magnetismo.png';
+import thumbFerromagnetismo from './assets/thumbnails/thumb_ferromagnetismo.png';
+import thumbElectroimanes from './assets/thumbnails/thumb_electroimanes.png';
+import thumbCampoMagnetico from './assets/thumbnails/thumb_campo_magnetico.png';
+import thumbFlujoMagnetico from './assets/thumbnails/thumb_flujo_magnetico.png';
+import thumbFuerzaLorentz from './assets/thumbnails/thumb_fuerza_lorentz.png';
+import thumbLeyOhmMagnetica from './assets/thumbnails/thumb_ley_ohm_magnetica.png';
+import thumbSeguridadMagnetica from './assets/thumbnails/thumb_seguridad_magnetica.png';
+import thumbLeyGauss from './assets/thumbnails/thumb_ley_gauss.png';
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -69,107 +81,174 @@ function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Link
               to="/magnetismo"
-              className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-colors cursor-pointer group"
+              className="bg-slate-900/60 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-all cursor-pointer group overflow-hidden"
             >
-              <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                <span className="text-primary-500/50 font-black">1.</span> Magnetismo
-              </h3>
-              <p className="text-sm text-slate-300 mb-4 flex-grow">Naturaleza de campos, interacción con conductores y diagnóstico de fallas.</p>
+              <div className="h-32 overflow-hidden relative">
+                <img src={thumbMagnetismo} alt="Magnetismo" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                  <span className="text-primary-500/50 font-black">1.</span> Magnetismo
+                </h3>
+                <p className="text-sm text-slate-300 mb-4 flex-grow">Naturaleza de campos, interacción con conductores y diagnóstico de fallas.</p>
 
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-white/5 text-slate-300 px-2 py-1 rounded text-xs border border-white/10">Campo Magnético</span>
-                <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Esencial</span>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-white/5 text-slate-300 px-2 py-1 rounded text-xs border border-white/10">Campo Magnético</span>
+                  <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Esencial</span>
+                </div>
               </div>
             </Link>
 
             <Link
               to="/ferromagnetismo"
-              className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-colors cursor-pointer group"
+              className="bg-slate-900/60 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-all cursor-pointer group overflow-hidden"
             >
-              <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                <span className="text-primary-500/50 font-black">2.</span> Ferromagnetismo
-              </h3>
-              <p className="text-sm text-slate-300 mb-4 flex-grow">Permeabilidad, saturación y curvas de histéresis en materiales técnicos.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Esencial</span>
+              <div className="h-32 overflow-hidden relative">
+                <img src={thumbFerromagnetismo} alt="Ferromagnetismo" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                  <span className="text-primary-500/50 font-black">2.</span> Ferromagnetismo
+                </h3>
+                <p className="text-sm text-slate-300 mb-4 flex-grow">Permeabilidad, saturación y curvas de histéresis en materiales técnicos.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Esencial</span>
+                </div>
               </div>
             </Link>
 
             <Link
               to="/electroimanes"
-              className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-colors cursor-pointer group"
+              className="bg-slate-900/60 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-all cursor-pointer group overflow-hidden"
             >
-              <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                <span className="text-primary-500/50 font-black">3.</span> Electroimanes
-              </h3>
-              <p className="text-sm text-slate-300 mb-4 flex-grow">Funcionamiento de solenoides, FMM y la importancia de la espira de sombra.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Nuevo</span>
+              <div className="h-32 overflow-hidden relative">
+                <img src={thumbElectroimanes} alt="Electroimanes" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                  <span className="text-primary-500/50 font-black">3.</span> Electroimanes
+                </h3>
+                <p className="text-sm text-slate-300 mb-4 flex-grow">Funcionamiento de solenoides, FMM y la importancia de la espira de sombra.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Nuevo</span>
+                </div>
               </div>
             </Link>
 
             <Link
               to="/campo-magnetico"
-              className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-colors cursor-pointer group"
+              className="bg-slate-900/60 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-all cursor-pointer group overflow-hidden"
             >
-              <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                <span className="text-primary-500/50 font-black">4.</span> Campo Magnético
-              </h3>
-              <p className="text-sm text-slate-300 mb-4 flex-grow">Líneas de fuerza e interacciones mecánicas.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Nuevo</span>
+              <div className="h-32 overflow-hidden relative">
+                <img src={thumbCampoMagnetico} alt="Campo Magnético" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                  <span className="text-primary-500/50 font-black">4.</span> Campo Magnético
+                </h3>
+                <p className="text-sm text-slate-300 mb-4 flex-grow">Líneas de fuerza e interacciones mecánicas.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Nuevo</span>
+                </div>
               </div>
             </Link>
 
             <Link
               to="/flujo-magnetico"
-              className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-colors cursor-pointer group"
+              className="bg-slate-900/60 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-all cursor-pointer group overflow-hidden"
             >
-              <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                <span className="text-primary-500/50 font-black">5.</span> Flujo Magnético
-              </h3>
-              <p className="text-sm text-slate-300 mb-4 flex-grow">Webers, Teslas y eficiencia en transformadores.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Nuevo</span>
+              <div className="h-32 overflow-hidden relative">
+                <img src={thumbFlujoMagnetico} alt="Flujo Magnético" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                  <span className="text-primary-500/50 font-black">5.</span> Flujo Magnético
+                </h3>
+                <p className="text-sm text-slate-300 mb-4 flex-grow">Webers, Teslas y eficiencia en transformadores.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Nuevo</span>
+                </div>
               </div>
             </Link>
 
             <Link
               to="/fuerza-lorentz"
-              className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-colors cursor-pointer group"
+              className="bg-slate-900/60 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-all cursor-pointer group overflow-hidden"
             >
-              <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                <span className="text-primary-500/50 font-black">6.</span> Fuerza de Lorentz
-              </h3>
-              <p className="text-sm text-slate-300 mb-4 flex-grow">El principio fundamental del par motor.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Nuevo</span>
+              <div className="h-32 overflow-hidden relative">
+                <img src={thumbFuerzaLorentz} alt="Fuerza de Lorentz" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                  <span className="text-primary-500/50 font-black">6.</span> Fuerza de Lorentz
+                </h3>
+                <p className="text-sm text-slate-300 mb-4 flex-grow">El principio fundamental del par motor.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Nuevo</span>
+                </div>
               </div>
             </Link>
 
             <Link
-              to="/electromagnetismo"
-              className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-colors cursor-pointer group"
+              to="/ley-ohm-magnetica"
+              className="bg-slate-900/60 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-all cursor-pointer group overflow-hidden"
             >
-              <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                <span className="text-primary-500/50 font-black">7.</span> Electromagnetismo
-              </h3>
-              <p className="text-sm text-slate-300 mb-4 flex-grow">Relación entre corriente y magnetismo, solenoides y motores.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-white/5 text-slate-500 px-2 py-1 rounded text-xs border border-white/10 italic">Próximamente</span>
+              <div className="h-32 overflow-hidden relative">
+                <img src={thumbLeyOhmMagnetica} alt="Ley de Ohm Magnética" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                  <span className="text-primary-500/50 font-black">7.</span> Ley de Ohm Magnética
+                </h3>
+                <p className="text-sm text-slate-300 mb-4 flex-grow">Reluctancia, FMM y eficiencia en núcleos técnicos.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Nuevo</span>
+                </div>
               </div>
             </Link>
 
             <Link
-              to="/induccion"
-              className="bg-slate-900/60 p-6 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-colors cursor-pointer group"
+              to="/seguridad-magnetica"
+              className="bg-slate-900/60 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-all cursor-pointer group overflow-hidden"
             >
-              <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                <span className="text-primary-500/50 font-black">8.</span> Inducción
-              </h3>
-              <p className="text-sm text-slate-300 mb-4 flex-grow">Leyes de Faraday y Lenz, generadores y transformadores.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-white/5 text-slate-500 px-2 py-1 rounded text-xs border border-white/10 italic">Próximamente</span>
+              <div className="h-32 overflow-hidden relative">
+                <img src={thumbSeguridadMagnetica} alt="Seguridad Magnética" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                  <span className="text-primary-500/50 font-black">8.</span> Seguridad Magnética
+                </h3>
+                <p className="text-sm text-slate-300 mb-4 flex-grow">Protocolos de prevención y riesgos de alta inducción.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Seguridad</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link
+              to="/ley-gauss"
+              className="bg-slate-900/60 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-all cursor-pointer group overflow-hidden"
+            >
+              <div className="h-32 overflow-hidden relative">
+                <img src={thumbLeyGauss} alt="Ley de Gauss" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                  <span className="text-primary-500/50 font-black">9.</span> Ley de Gauss
+                </h3>
+                <p className="text-sm text-slate-300 mb-4 flex-grow">Líneas cerradas, inexistencia del monopolo y fugas de flujo.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Nuevo</span>
+                </div>
               </div>
             </Link>
           </div>
@@ -212,9 +291,9 @@ function Home() {
         <div className="bg-gradient-to-r from-primary-600 to-primary-800 p-[1px] rounded-3xl mt-12 shadow-2xl shadow-primary-500/20">
           <div className="bg-slate-950 rounded-[23px] p-8 relative overflow-hidden flex flex-col md:flex-row gap-8 items-center">
             <div className="flex-1 space-y-4 z-10">
-              <h2 className="text-3xl font-black text-white">Material en Desarrollo</h2>
+              <h2 className="text-3xl font-black text-white">Unidad 1 Completa</h2>
               <p className="text-slate-300 text-lg">
-                Estamos cargando los temas de la Unidad 1. Mantente atento a las actualizaciones regulares.
+                Has completado todos los contenidos fundamentales del magnetismo para técnicos.
               </p>
             </div>
             <div className="z-10 bg-primary-500/20 p-6 rounded-2xl border border-primary-500/30">
@@ -245,8 +324,9 @@ function App() {
         <Route path="/campo-magnetico" element={<AppTopicWrapper view={CampoMagneticoView} />} />
         <Route path="/flujo-magnetico" element={<AppTopicWrapper view={FlujoMagneticoView} />} />
         <Route path="/fuerza-lorentz" element={<AppTopicWrapper view={FuerzaLorentzView} />} />
-        <Route path="/electromagnetismo" element={<AppTopicWrapper view={ElectromagnetismoView} />} />
-        <Route path="/induccion" element={<AppTopicWrapper view={InduccionView} />} />
+        <Route path="/ley-ohm-magnetica" element={<AppTopicWrapper view={LeyOhmMagneticaView} />} />
+        <Route path="/seguridad-magnetica" element={<AppTopicWrapper view={SeguridadMagneticaView} />} />
+        <Route path="/ley-gauss" element={<AppTopicWrapper view={LeyGaussView} />} />
       </Routes>
     </Router>
   );
