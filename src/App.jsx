@@ -16,6 +16,8 @@ import TransformadorElevadorView from './views/topics/TransformadorElevadorView'
 import LeyesFaradayView from './views/topics/LeyesFaradayView';
 import InduccionView from './views/topics/InduccionView';
 import LeyLenzView from './views/topics/LeyLenzView';
+import CircuitoEquivalenteView from './views/topics/CircuitoEquivalenteView';
+import PruebasTransformadorView from './views/topics/PruebasTransformadorView';
 
 // Importación de miniaturas
 import thumbMagnetismo from './assets/thumbnails/thumb_magnetismo.png';
@@ -33,6 +35,8 @@ import thumbElevador from './assets/thumbnails/thumb_transformador_elevador.png'
 import thumbFaraday from './assets/thumbnails/thumb_faraday.png';
 import thumbInduccion from './assets/thumbnails/thumb_induccion.png';
 import thumbLenz from './assets/thumbnails/thumb_lenz.png';
+import thumbCircuitoEquivalente from './assets/thumbnails/thumb_circuito_equivalente.png';
+import thumbPruebasTransformador from './assets/thumbnails/thumb_pruebas_transformador.png';
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -377,6 +381,44 @@ function Home() {
                 </div>
               </div>
             </Link>
+
+            <Link
+              to="/circuito-equivalente"
+              className="bg-slate-900/60 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-all cursor-pointer group overflow-hidden"
+            >
+              <div className="h-32 overflow-hidden relative">
+                <img src={thumbCircuitoEquivalente} alt="Circuito Equivalente" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                  <span className="text-primary-500/50 font-black">19.</span> Circuito Equivalente
+                </h3>
+                <p className="text-sm text-slate-300 mb-4 flex-grow">Ramas serie y paralelo, regulación de voltaje e impedancia.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Avanzado</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link
+              to="/pruebas-transformador"
+              className="bg-slate-900/60 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-all cursor-pointer group overflow-hidden"
+            >
+              <div className="h-32 overflow-hidden relative">
+                <img src={thumbPruebasTransformador} alt="Pruebas de Transformador" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                  <span className="text-primary-500/50 font-black">20.</span> Pruebas de Laboratorio
+                </h3>
+                <p className="text-sm text-slate-300 mb-4 flex-grow">Ensayos de vacío y cortocircuito para verificar eficiencia y seguridad.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Diagnóstico</span>
+                </div>
+              </div>
+            </Link>
           </div>
         </section>
 
@@ -459,6 +501,8 @@ function App() {
         <Route path="/leyes-faraday" element={<AppTopicWrapper view={LeyesFaradayView} />} />
         <Route path="/induccion" element={<AppTopicWrapper view={InduccionView} />} />
         <Route path="/ley-lenz" element={<AppTopicWrapper view={LeyLenzView} />} />
+        <Route path="/circuito-equivalente" element={<AppTopicWrapper view={CircuitoEquivalenteView} />} />
+        <Route path="/pruebas-transformador" element={<AppTopicWrapper view={PruebasTransformadorView} />} />
       </Routes>
     </Router>
   );

@@ -71,6 +71,8 @@ export const TopicLayout = ({ title, objective, unit = "Unidad 1: Fundamentos", 
     { name: "Formación Científica", path: "/formacion-cientifica" },
     { name: "Transformadores", path: "/transformadores-gral" },
     { name: "Transformador Elevador", path: "/transformador-elevador" },
+    { name: "Circuito Equivalente", path: "/circuito-equivalente" },
+    { name: "Pruebas Lab", path: "/pruebas-transformador" },
   ];
 
   return (
