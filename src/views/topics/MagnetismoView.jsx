@@ -1,12 +1,26 @@
 import React, { useState } from 'react';
 import { ArrowLeft, Target, ImageIcon, BookOpen, ChevronDown, ChevronRight, Zap, Magnet } from 'lucide-react';
+import magnetSolenoideImg from '../../assets/IMG_TEL301_001.png';
+import reglaManoDerechaImg from '../../assets/IMG_TEL301_002.png';
 
-const ImagePlaceholder = ({ title, height = "h-48", id }) => (
-  <div className={`w-full ${height} bg-slate-900/60 border-2 border-dashed border-primary-500/30 rounded-2xl flex flex-col items-center justify-center text-slate-500 hover:border-primary-500/60 hover:text-primary-400 hover:bg-slate-900/80 transition-all cursor-pointer group mt-4 mb-2`}>
-    <ImageIcon className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform" />
-    <p className="text-sm font-medium uppercase tracking-widest">{title}</p>
-    <p className="text-xs mt-1 opacity-60">ID: {id}</p>
-    <p className="text-[10px] mt-1 opacity-40 italic">(Espacio para imagen técnica)</p>
+const TechnicalImage = ({ src, alt, title, id, height = "h-auto" }) => (
+  <div className="w-full bg-slate-900/40 rounded-3xl overflow-hidden border border-white/5 mt-4 mb-2 group">
+    <div className={`relative ${height} flex items-center justify-center bg-slate-900/20`}>
+      <img 
+        src={src} 
+        alt={alt} 
+        className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105" 
+      />
+      <div className="absolute top-4 right-4 bg-slate-950/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+        <p className="text-[10px] text-primary-400 font-mono tracking-tighter uppercase">{id}</p>
+      </div>
+    </div>
+    <div className="p-4 bg-slate-900/60 border-t border-white/5">
+      <p className="text-sm font-bold text-slate-200 flex items-center gap-2 uppercase tracking-wider">
+        <ImageIcon className="w-4 h-4 text-primary-500" />
+        {title}
+      </p>
+    </div>
   </div>
 );
 
@@ -85,10 +99,11 @@ const MagnetismoView = ({ onBack }) => {
           <p className="text-slate-300 leading-relaxed text-lg text-justify">
             Todo campo magnético se visualiza mediante líneas de inducción. Un punto crítico para el técnico es entender que estas líneas siempre buscan el camino de menor resistencia (reluctancia). En una máquina eléctrica, si el entrehierro (el espacio de aire entre el estator y el rotor) es irregular, el campo magnético será asimétrico, provocando vibraciones mecánicas severas y desgaste prematuro en los descansos.
           </p>
-          <ImagePlaceholder
+          <TechnicalImage
             id="IMG_TEL301_001"
+            src={magnetSolenoideImg}
+            alt="Infografía: Imán y Solenoide"
             title="Infografía: Imán y Solenoide"
-            height="h-64"
           />
         </div>
       </CollapsibleSection>
@@ -102,10 +117,11 @@ const MagnetismoView = ({ onBack }) => {
           <p className="text-slate-300 leading-relaxed text-lg bg-primary-500/5 p-6 rounded-2xl border border-primary-500/20 italic text-justify">
             Es vital considerar el magnetismo remanente. En muchos contactores o frenos electromagnéticos, el material queda ligeramente magnetizado después de quitar la corriente. Si el técnico no conoce este fenómeno, podría confundir un problema mecánico (un resorte vencido) con un problema de histéresis del material del núcleo.
           </p>
-          <ImagePlaceholder
+          <TechnicalImage
             id="IMG_TEL301_002"
+            src={reglaManoDerechaImg}
+            alt="Regla de la mano derecha"
             title="Regla de la mano derecha"
-            height="h-64"
           />
         </div>
       </CollapsibleSection>

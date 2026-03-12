@@ -1,5 +1,27 @@
 import React, { useState } from 'react';
-import { ArrowLeft, Target, ShieldAlert, Zap, BookOpen, ChevronDown, ChevronRight, Activity, AlertTriangle, EyeOff, Thermometer } from 'lucide-react';
+import { ArrowLeft, Target, ShieldAlert, Zap, BookOpen, ChevronDown, ChevronRight, Activity, AlertTriangle, EyeOff, Thermometer, ImageIcon } from 'lucide-react';
+import segMagImg from '../../assets/IMG_SEG_MAG_001.png';
+
+const TechnicalImage = ({ src, alt, title, id, height = "h-auto" }) => (
+  <div className="w-full bg-slate-900/40 rounded-3xl overflow-hidden border border-white/5 mt-4 mb-2 group">
+    <div className={`relative ${height} flex items-center justify-center bg-slate-900/20`}>
+      <img 
+        src={src} 
+        alt={alt} 
+        className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105" 
+      />
+      <div className="absolute top-4 right-4 bg-slate-950/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+        <p className="text-[10px] text-primary-400 font-mono tracking-tighter uppercase">{id}</p>
+      </div>
+    </div>
+    <div className="p-4 bg-slate-900/60 border-t border-white/5">
+      <p className="text-sm font-bold text-slate-200 flex items-center gap-2 uppercase tracking-wider">
+        <ImageIcon className="w-4 h-4 text-primary-500" />
+        {title}
+      </p>
+    </div>
+  </div>
+);
 
 const CollapsibleSection = ({ title, icon: Icon, children, defaultOpen = false }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
@@ -47,8 +69,8 @@ const SeguridadMagneticaView = ({ onBack }) => {
             <span className="w-8 h-[1px] bg-primary-500"></span>
             Tema 8
           </p>
-          <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight">
-            Seguridad en Entornos Magnéticos
+          <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight leading-none">
+            Seguridad en Entornos <span className="text-primary-500">Magnéticos</span>
           </h1>
         </div>
       </header>
@@ -94,16 +116,12 @@ const SeguridadMagneticaView = ({ onBack }) => {
             </p>
           </div>
           
-          <div className="glass-morphism rounded-3xl p-6 border border-primary-500/10 bg-white/5">
-            <img 
-              src="/src/assets/IMG_SEG_MAG_001.png" 
-              alt="Señalética de Seguridad Magnética" 
-              className="w-full h-auto rounded-2xl shadow-2xl invert-[0.05]"
-            />
-            <p className="text-slate-500 text-[10px] mt-4 italic text-center uppercase tracking-widest">
-              ID: IMG_SEG_MAG_001 | Normativa ISO de Seguridad Magnética
-            </p>
-          </div>
+          <TechnicalImage 
+            src={segMagImg} 
+            alt="Señalética de Seguridad Magnética" 
+            title="Normativa ISO de Seguridad Magnética"
+            id="IMG_SEG_MAG_001"
+          />
         </div>
       </CollapsibleSection>
 

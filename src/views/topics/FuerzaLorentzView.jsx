@@ -1,5 +1,27 @@
 import React, { useState } from 'react';
-import { ArrowLeft, Target, Magnet, Zap, BookOpen, ChevronDown, ChevronRight, Activity, Move } from 'lucide-react';
+import { ArrowLeft, Target, Magnet, Zap, BookOpen, ChevronDown, ChevronRight, Activity, Move, ImageIcon } from 'lucide-react';
+import lorentzImg from '../../assets/IMG_LORENTZ_001.png';
+
+const TechnicalImage = ({ src, alt, title, id, height = "h-auto" }) => (
+  <div className="w-full bg-slate-900/40 rounded-3xl overflow-hidden border border-white/5 mt-4 mb-2 group">
+    <div className={`relative ${height} flex items-center justify-center bg-slate-900/20`}>
+      <img 
+        src={src} 
+        alt={alt} 
+        className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105" 
+      />
+      <div className="absolute top-4 right-4 bg-slate-950/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+        <p className="text-[10px] text-primary-400 font-mono tracking-tighter uppercase">{id}</p>
+      </div>
+    </div>
+    <div className="p-4 bg-slate-900/60 border-t border-white/5">
+      <p className="text-sm font-bold text-slate-200 flex items-center gap-2 uppercase tracking-wider">
+        <ImageIcon className="w-4 h-4 text-primary-500" />
+        {title}
+      </p>
+    </div>
+  </div>
+);
 
 const CollapsibleSection = ({ title, icon: Icon, children, defaultOpen = false }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
@@ -47,8 +69,8 @@ const FuerzaLorentzView = ({ onBack }) => {
             <span className="w-8 h-[1px] bg-primary-500"></span>
             Tema 6
           </p>
-          <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight">
-            Fuerza de Lorentz
+          <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight leading-none">
+            Fuerza de <span className="text-primary-500">Lorentz</span>
           </h1>
         </div>
       </header>
@@ -92,16 +114,12 @@ const FuerzaLorentzView = ({ onBack }) => {
               </p>
             </div>
             
-            <div className="glass-morphism rounded-3xl p-6 border border-primary-500/10 bg-slate-950">
-              <img 
-                src="/src/assets/IMG_LORENTZ_001.png" 
-                alt="Trayectoria de una partícula en un campo magnético" 
-                className="w-full h-auto rounded-2xl shadow-2xl brightness-125"
-              />
-              <p className="text-slate-500 text-[10px] mt-4 italic text-center uppercase tracking-widest">
-                ID: IMG_LORENTZ_001 | Simulación física de trayectoria curva
-              </p>
-            </div>
+            <TechnicalImage 
+              src={lorentzImg} 
+              alt="Trayectoria de una partícula en un campo magnético" 
+              title="Simulación física de trayectoria curva"
+              id="IMG_LORENTZ_001"
+            />
           </div>
         </div>
       </CollapsibleSection>
