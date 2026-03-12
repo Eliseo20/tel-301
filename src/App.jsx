@@ -40,7 +40,7 @@ function Home() {
               Plataforma de Aprendizaje
             </p>
             <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight">
-              Plataforma de Mantenimiento
+              Maquinas Electricas
             </h1>
           </div>
         </header>
@@ -51,7 +51,7 @@ function Home() {
             <div className="space-y-6">
               <h2 className="text-2xl font-bold text-white">Bienvenido al Contenido Técnico</h2>
               <p className="text-slate-300 leading-relaxed text-lg">
-                Aquí encontrarás todo el material didáctico estructurado por unidades para el diagnóstico y mantenimiento de equipos electromecánicos.
+                Aprende lo fundamental para que puedas mantener, diagnosticar y reparar máquinas profesionalmente.
               </p>
               <Link
                 to="/magnetismo"
