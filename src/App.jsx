@@ -10,6 +10,9 @@ import FuerzaLorentzView from './views/topics/FuerzaLorentzView';
 import LeyOhmMagneticaView from './views/topics/LeyOhmMagneticaView';
 import SeguridadMagneticaView from './views/topics/SeguridadMagneticaView';
 import LeyGaussView from './views/topics/LeyGaussView';
+import FormacionCientificaView from './views/topics/FormacionCientificaView';
+import TransformadoresGralView from './views/topics/TransformadoresGralView';
+import TransformadorElevadorView from './views/topics/TransformadorElevadorView';
 
 // Importación de miniaturas
 import thumbMagnetismo from './assets/thumbnails/thumb_magnetismo.png';
@@ -21,6 +24,9 @@ import thumbFuerzaLorentz from './assets/thumbnails/thumb_fuerza_lorentz.png';
 import thumbLeyOhmMagnetica from './assets/thumbnails/thumb_ley_ohm_magnetica.png';
 import thumbSeguridadMagnetica from './assets/thumbnails/thumb_seguridad_magnetica.png';
 import thumbLeyGauss from './assets/thumbnails/thumb_ley_gauss.png';
+import thumbFormacion from './assets/thumbnails/thumb_formacion_cientifica.png';
+import thumbTransformadores from './assets/thumbnails/thumb_transformadores.png';
+import thumbElevador from './assets/thumbnails/thumb_transformador_elevador.png';
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -251,6 +257,63 @@ function Home() {
                 </div>
               </div>
             </Link>
+
+            <Link
+              to="/formacion-cientifica"
+              className="bg-slate-900/60 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-all cursor-pointer group overflow-hidden"
+            >
+              <div className="h-32 overflow-hidden relative">
+                <img src={thumbFormacion} alt="Formación Científica" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                  <span className="text-primary-500/50 font-black">13.</span> Formación Científica
+                </h3>
+                <p className="text-sm text-slate-300 mb-4 flex-grow">Integración de física, matemáticas y normativa técnica para diagnósticos.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Fundamentos</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link
+              to="/transformadores-gral"
+              className="bg-slate-900/60 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-all cursor-pointer group overflow-hidden"
+            >
+              <div className="h-32 overflow-hidden relative">
+                <img src={thumbTransformadores} alt="Transformadores" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                  <span className="text-primary-500/50 font-black">14.</span> Transformadores
+                </h3>
+                <p className="text-sm text-slate-300 mb-4 flex-grow">Principios de inducción mutua, construcción y mantenimiento de máquinas.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Potencia</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link
+              to="/transformador-elevador"
+              className="bg-slate-900/60 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-all cursor-pointer group overflow-hidden"
+            >
+              <div className="h-32 overflow-hidden relative">
+                <img src={thumbElevador} alt="Transformador Elevador" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                  <span className="text-primary-500/50 font-black">15.</span> Transformador Elevador
+                </h3>
+                <p className="text-sm text-slate-300 mb-4 flex-grow">Voltajes extremos, estrés dieléctrico y análisis de gases (DGA).</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Alta Tensión</span>
+                </div>
+              </div>
+            </Link>
           </div>
         </section>
 
@@ -327,6 +390,9 @@ function App() {
         <Route path="/ley-ohm-magnetica" element={<AppTopicWrapper view={LeyOhmMagneticaView} />} />
         <Route path="/seguridad-magnetica" element={<AppTopicWrapper view={SeguridadMagneticaView} />} />
         <Route path="/ley-gauss" element={<AppTopicWrapper view={LeyGaussView} />} />
+        <Route path="/formacion-cientifica" element={<AppTopicWrapper view={FormacionCientificaView} />} />
+        <Route path="/transformadores-gral" element={<AppTopicWrapper view={TransformadoresGralView} />} />
+        <Route path="/transformador-elevador" element={<AppTopicWrapper view={TransformadorElevadorView} />} />
       </Routes>
     </Router>
   );
