@@ -13,6 +13,9 @@ import LeyGaussView from './views/topics/LeyGaussView';
 import FormacionCientificaView from './views/topics/FormacionCientificaView';
 import TransformadoresGralView from './views/topics/TransformadoresGralView';
 import TransformadorElevadorView from './views/topics/TransformadorElevadorView';
+import LeyesFaradayView from './views/topics/LeyesFaradayView';
+import InduccionView from './views/topics/InduccionView';
+import LeyLenzView from './views/topics/LeyLenzView';
 
 // Importación de miniaturas
 import thumbMagnetismo from './assets/thumbnails/thumb_magnetismo.png';
@@ -27,6 +30,9 @@ import thumbLeyGauss from './assets/thumbnails/thumb_ley_gauss.png';
 import thumbFormacion from './assets/thumbnails/thumb_formacion_cientifica.png';
 import thumbTransformadores from './assets/thumbnails/thumb_transformadores.png';
 import thumbElevador from './assets/thumbnails/thumb_transformador_elevador.png';
+import thumbFaraday from './assets/thumbnails/thumb_faraday.png';
+import thumbInduccion from './assets/thumbnails/thumb_induccion.png';
+import thumbLenz from './assets/thumbnails/thumb_lenz.png';
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -259,6 +265,63 @@ function Home() {
             </Link>
 
             <Link
+              to="/leyes-faraday"
+              className="bg-slate-900/60 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-all cursor-pointer group overflow-hidden"
+            >
+              <div className="h-32 overflow-hidden relative">
+                <img src={thumbFaraday} alt="Leyes de Faraday" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                  <span className="text-primary-500/50 font-black">10.</span> Leyes de Faraday
+                </h3>
+                <p className="text-sm text-slate-300 mb-4 flex-grow">Magnitud de la f.e.m. inducida y origen del voltaje en máquinas.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Inducción</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link
+              to="/induccion"
+              className="bg-slate-900/60 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-all cursor-pointer group overflow-hidden"
+            >
+              <div className="h-32 overflow-hidden relative">
+                <img src={thumbInduccion} alt="Inducción Electromagnética" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                  <span className="text-primary-500/50 font-black">11.</span> Inducción Electromagnética
+                </h3>
+                <p className="text-sm text-slate-300 mb-4 flex-grow">Autoinducción e inducción mutua en bobinas y transformadores.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Acoplamiento</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link
+              to="/ley-lenz"
+              className="bg-slate-900/60 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-all cursor-pointer group overflow-hidden"
+            >
+              <div className="h-32 overflow-hidden relative">
+                <img src={thumbLenz} alt="Ley de Lenz" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+              </div>
+              <div className="p-6 pt-2">
+                <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                  <span className="text-primary-500/50 font-black">12.</span> Ley de Lenz
+                </h3>
+                <p className="text-sm text-slate-300 mb-4 flex-grow">Sentido de la corriente inducida y fuerzas de oposición magnética.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-primary-500/10 text-primary-300 px-2 py-1 rounded text-xs border border-primary-500/20">Oposición</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link
               to="/formacion-cientifica"
               className="bg-slate-900/60 rounded-3xl border border-white/5 flex flex-col hover:border-primary-500/40 transition-all cursor-pointer group overflow-hidden"
             >
@@ -393,6 +456,9 @@ function App() {
         <Route path="/formacion-cientifica" element={<AppTopicWrapper view={FormacionCientificaView} />} />
         <Route path="/transformadores-gral" element={<AppTopicWrapper view={TransformadoresGralView} />} />
         <Route path="/transformador-elevador" element={<AppTopicWrapper view={TransformadorElevadorView} />} />
+        <Route path="/leyes-faraday" element={<AppTopicWrapper view={LeyesFaradayView} />} />
+        <Route path="/induccion" element={<AppTopicWrapper view={InduccionView} />} />
+        <Route path="/ley-lenz" element={<AppTopicWrapper view={LeyLenzView} />} />
       </Routes>
     </Router>
   );

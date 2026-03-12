@@ -65,6 +65,12 @@ export const TopicLayout = ({ title, objective, unit = "Unidad 1: Fundamentos", 
     { name: "Ley de Ohm Magnética", path: "/ley-ohm-magnetica" },
     { name: "Seguridad Magnética", path: "/seguridad-magnetica" },
     { name: "Ley de Gauss", path: "/ley-gauss" },
+    { name: "Leyes de Faraday", path: "/leyes-faraday" },
+    { name: "Inducción", path: "/induccion" },
+    { name: "Ley de Lenz", path: "/ley-lenz" },
+    { name: "Formación Científica", path: "/formacion-cientifica" },
+    { name: "Transformadores", path: "/transformadores-gral" },
+    { name: "Transformador Elevador", path: "/transformador-elevador" },
   ];
 
   return (

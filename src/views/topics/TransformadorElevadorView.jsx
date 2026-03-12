@@ -17,7 +17,7 @@ const TransformadorElevadorView = ({ onBack }) => {
       {/* 2. ¿Por qué es importante para el técnico? */}
       <CollapsibleSection title="¿Por qué es importante para el técnico?" icon={Zap} defaultOpen={true}>
         <p className="text-slate-300 leading-relaxed text-lg text-justify">
-          Los transformadores elevadores se encuentran principalmente en las centrales de generación. Un técnico en una planta fotovoltaica o hidroeléctrica debe entender que la corriente en el lado de baja (el generador) es altísima. Cualquier mal contacto en las barras de baja tensión de un transformador elevador generará puntos calientes inmediatos debido al efecto Joule ($I^2 \cdot R$). Los técnicos de pruebas y puestas en marcha deben ser extremadamente cuidadosos con las distancias de seguridad en el lado secundario, ya que el voltaje puede ser de cientos de kilovoltios.
+          Los transformadores elevadores se encuentran principalmente en las centrales de generación. Un técnico en una planta fotovoltaica o hidroeléctrica debe entender que la corriente en el lado de baja (el generador) es altísima. Cualquier mal contacto en las barras de baja tensión de un transformador elevador generará puntos calientes inmediatos debido al efecto Joule (I^2 * R). Los técnicos de pruebas y puestas en marcha deben ser extremadamente cuidadosos con las distancias de seguridad en el lado secundario, ya que el voltaje puede ser de cientos de kilovoltios.
         </p>
       </CollapsibleSection>
 
