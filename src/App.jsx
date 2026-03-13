@@ -56,7 +56,7 @@ function Home() {
               Maquinas Electricas
             </p>
             <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight">
-              Plataforma de Aprendizaje
+              Mantenimiento de maquinas electricas
             </h1>
           </div>
         </header>
