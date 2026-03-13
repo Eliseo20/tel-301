@@ -53,10 +53,10 @@ function Home() {
           <div>
             <p className="text-primary-500 font-bold text-sm uppercase tracking-widest mb-1 flex items-center gap-2">
               <span className="w-8 h-[1px] bg-primary-500"></span>
-              Plataforma de Aprendizaje
+              Maquinas Electricas
             </p>
             <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight">
-              Maquinas Electricas
+              Plataforma de Aprendizaje
             </h1>
           </div>
         </header>
@@ -69,13 +69,6 @@ function Home() {
               <p className="text-slate-300 leading-relaxed text-lg">
                 Aprende lo fundamental para que puedas mantener, diagnosticar y reparar máquinas profesionalmente.
               </p>
-              <Link
-                to="/magnetismo"
-                className="group inline-flex items-center gap-3 bg-primary-600 hover:bg-primary-500 text-white px-6 py-4 rounded-2xl font-bold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-primary-500/20"
-              >
-                <Magnet className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                Empezar Tema 1: Magnetismo
-              </Link>
             </div>
 
             <div className="bg-slate-900/60 p-6 rounded-2xl border border-white/5 h-full">
@@ -422,54 +415,7 @@ function Home() {
           </div>
         </section>
 
-        {/* E. Sección Acordeón */}
-        <section className="space-y-4">
-          <button onClick={() => setIsOpen(!isOpen)} className="w-full flex items-center justify-between p-6 glass-morphism rounded-2xl hover:bg-white/5 transition-all outline-none cursor-pointer group">
-            <div className="flex items-center gap-4">
-              <div className={`p-3 rounded-xl transition-colors duration-300 ${isOpen ? 'bg-primary-500 text-white' : 'bg-white/5 text-primary-400'}`}>
-                <BookOpen className="w-6 h-6" />
-              </div>
-              <div className="text-left">
-                <h2 className="text-2xl font-bold text-white group-hover:text-primary-400 transition-colors">Detalles del Módulo</h2>
-              </div>
-            </div>
-            <div className={`p-2 rounded-full ${isOpen ? 'bg-primary-500/10 text-primary-400' : 'bg-white/5 text-slate-400'}`}>
-              {isOpen ? <ChevronDown className="w-6 h-6" /> : <ChevronRight className="w-6 h-6" />}
-            </div>
-          </button>
-          <div className={`transition-all duration-700 ease-in-out overflow-hidden ${isOpen ? 'opacity-100 max-h-[5000px] mt-4' : 'opacity-0 max-h-0'}`}>
-            <div className="glass-morphism rounded-[2.5rem] p-8 md:p-14 border border-primary-500/10">
-              <h3 className="text-xl font-bold text-white mb-4">Metodología de Aprendizaje</h3>
-              <p className="text-slate-300 mb-4 text-lg">
-                El material se enfoca en el aprendizaje práctico-teórico mediante la visualización de fenómenos físicos y su aplicación directa en el campo del mantenimiento industrial. Cada lección incluye:
-              </p>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-400">
-                <li className="flex items-center gap-2 bg-white/5 p-4 rounded-xl border border-white/5">
-                  <span className="w-2 h-2 bg-primary-500 rounded-full"></span> Infografías Técnicas HD
-                </li>
-                <li className="flex items-center gap-2 bg-white/5 p-4 rounded-xl border border-white/5">
-                  <span className="w-2 h-2 bg-primary-500 rounded-full"></span> Enfoque en Mantenimiento
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
 
-        {/* F. Callout Final Especial */}
-        <div className="bg-gradient-to-r from-primary-600 to-primary-800 p-[1px] rounded-3xl mt-12 shadow-2xl shadow-primary-500/20">
-          <div className="bg-slate-950 rounded-[23px] p-8 relative overflow-hidden flex flex-col md:flex-row gap-8 items-center">
-            <div className="flex-1 space-y-4 z-10">
-              <h2 className="text-3xl font-black text-white">Unidad 1 Completa</h2>
-              <p className="text-slate-300 text-lg">
-                Has completado todos los contenidos fundamentales del magnetismo para técnicos.
-              </p>
-            </div>
-            <div className="z-10 bg-primary-500/20 p-6 rounded-2xl border border-primary-500/30">
-              <p className="text-primary-300 font-bold text-center">TEL-301</p>
-            </div>
-            <div className="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-primary-500/20 blur-[100px] rounded-full pointer-events-none"></div>
-          </div>
-        </div>
 
       </div>
     </div>
