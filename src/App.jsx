@@ -78,7 +78,7 @@ function Home() {
               <ul className="space-y-3 text-slate-300">
                 <li>• Explorar conceptos de Magnetismo.</li>
                 <li>• Identificar polaridades y campos.</li>
-                <li>• Diagnosticar magnetismo remanente.</li>
+                <li>• diagnosticar fallas.</li>
               </ul>
             </div>
           </div>
