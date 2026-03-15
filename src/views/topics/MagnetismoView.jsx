@@ -373,9 +373,21 @@ const MagnetismoView = ({ onBack }) => {
           <div className="bg-slate-800/50 p-4 rounded-lg my-4 text-center">
             <code className="text-primary-300 text-lg">F = q (v × B)</code>
           </div>
-          <p className="text-slate-300 leading-relaxed text-lg text-justify">
+          <p className="text-slate-300 leading-relaxed text-lg text-justify mb-4">
             Esta fuerza es fundamental para entender el funcionamiento de máquinas eléctricas, ya que constituye la base física de la interacción entre corriente y campo magnético en motores y generadores. Además, explica el comportamiento de partículas en dispositivos como tubos de rayos catódicos y aceleradores de partículas.
           </p>
+          <div className="w-full flex justify-center my-8">
+            <iframe 
+              width="560" 
+              height="315" 
+              src="https://www.youtube.com/embed/yrrq1hPAGH8" 
+              title="YouTube video player" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowFullScreen
+              className="rounded-xl shadow-lg border border-slate-700 max-w-full"
+            ></iframe>
+          </div>
         </div>
       </CollapsibleSection>
 
