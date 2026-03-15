@@ -404,9 +404,21 @@ const MagnetismoView = ({ onBack }) => {
             <li><strong>Flujo Magnético (Φ):</strong> Equivalente a la corriente, en webers.</li>
             <li><strong>Reluctancia (ℛ):</strong> Equivalente a la resistencia eléctrica, en ampere-vuelta/weber.</li>
           </ul>
-          <p className="text-slate-300 leading-relaxed text-lg text-justify">
+          <p className="text-slate-300 leading-relaxed text-lg text-justify mb-4">
             Esta ley es aplicada extensamente en el diseño de núcleos magnéticos para transformadores y máquinas eléctricas, estimando la cantidad de vueltas necesarias en una bobina o el material adecuado para obtener el flujo magnético requerido.
           </p>
+          <div className="w-full flex justify-center my-8">
+            <iframe 
+              width="560" 
+              height="315" 
+              src="https://www.youtube.com/embed/C87IiWG4U-4" 
+              title="YouTube video player" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowFullScreen
+              className="rounded-xl shadow-lg border border-slate-700 max-w-full"
+            ></iframe>
+          </div>
         </div>
       </CollapsibleSection>
 
