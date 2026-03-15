@@ -3,11 +3,146 @@ import { BookOpen, Target, Magnet, Zap, Globe, Settings, Activity, ShieldAlert, 
 import { TopicLayout, CollapsibleSection } from '../../components/TopicComponents';
 
 const MagnetismoView = ({ onBack }) => {
+  const glossaryAside = (
+    <div className="glass-morphism rounded-2xl p-6 border border-primary-500/20 shadow-xl space-y-6">
+      <div className="flex items-center gap-3 border-b border-white/10 pb-4">
+        <Magnet className="w-6 h-6 text-primary-400" />
+        <h3 className="text-xl font-bold text-white uppercase tracking-tighter">Glosario de Expresiones y Magnitudes Magnéticas</h3>
+      </div>
+      <p className="text-sm text-slate-400 italic">
+        Este glosario traduce el lenguaje matemático del texto a conceptos prácticos aplicables en el taller de máquinas eléctricas.
+      </p>
+      
+      <div className="space-y-4">
+        {/* Item 1 */}
+        <details className="group border border-white/5 bg-slate-900/40 rounded-xl overflow-hidden cursor-pointer" open>
+          <summary className="font-semibold text-white p-3 flex justify-between items-center group-hover:bg-white/5 transition-colors">
+            1. Intensidad de Campo Magnético ($H$)
+            <span className="text-primary-500 group-open:rotate-180 transition-transform text-xs">▼</span>
+          </summary>
+          <div className="p-3 pt-0 text-sm text-slate-300 space-y-2">
+            <p>Es el "esfuerzo" o la fuerza externa que intenta producir magnetismo. En un motor, depende directamente de la corriente y del número de vueltas de la bobina.</p>
+            <p><span className="text-primary-400 font-medium">Unidad:</span> Amperio por metro (A/m).</p>
+            <p><span className="text-emerald-400 font-medium">Concepto clave:</span> Es la causa del magnetismo.</p>
+          </div>
+        </details>
+
+        {/* Item 2 */}
+        <details className="group border border-white/5 bg-slate-900/40 rounded-xl overflow-hidden cursor-pointer">
+          <summary className="font-semibold text-white p-3 flex justify-between items-center group-hover:bg-white/5 transition-colors">
+            2. Densidad de Flujo Magnético ($B$)
+            <span className="text-primary-500 group-open:rotate-180 transition-transform text-xs">▼</span>
+          </summary>
+          <div className="p-3 pt-0 text-sm text-slate-300 space-y-2">
+            <p>Representa cuántas "líneas de fuerza" pasan por un área determinada de un material (por ejemplo, a través del núcleo de un transformador).</p>
+            <p><span className="text-primary-400 font-medium">Unidad:</span> Tesla (T) o Gauss (Gs).</p>
+            <p><span className="text-indigo-400 font-medium">Relación:</span> <code className="bg-slate-800 px-1 rounded">B = μ · H</code></p>
+            <p><span className="text-emerald-400 font-medium">Concepto clave:</span> Es el efecto real del magnetismo en el material.</p>
+          </div>
+        </details>
+
+        {/* Item 3 */}
+        <details className="group border border-white/5 bg-slate-900/40 rounded-xl overflow-hidden cursor-pointer">
+          <summary className="font-semibold text-white p-3 flex justify-between items-center group-hover:bg-white/5 transition-colors">
+            3. Permeabilidad Magnética (μ)
+            <span className="text-primary-500 group-open:rotate-180 transition-transform text-xs">▼</span>
+          </summary>
+          <div className="p-3 pt-0 text-sm text-slate-300 space-y-2">
+            <p>Es la "facilidad" que ofrece un material para dejar pasar el flujo magnético.</p>
+            <ul className="list-disc pl-4 space-y-1">
+              <li><span className="text-white font-medium">Materiales Ferromagnéticos:</span> Tienen una μ muy alta (concentran el magnetismo).</li>
+              <li><span className="text-white font-medium">Vacío/Aire:</span> Tienen una μ₀ muy baja (el magnetismo se dispersa).</li>
+            </ul>
+            <p><span className="text-emerald-400 font-medium">Concepto clave:</span> Es como la "conductividad" pero para el magnetismo.</p>
+          </div>
+        </details>
+
+        {/* Item 4 */}
+        <details className="group border border-white/5 bg-slate-900/40 rounded-xl overflow-hidden cursor-pointer">
+          <summary className="font-semibold text-white p-3 flex justify-between items-center group-hover:bg-white/5 transition-colors">
+            4. Flujo Magnético (Φ)
+            <span className="text-primary-500 group-open:rotate-180 transition-transform text-xs">▼</span>
+          </summary>
+          <div className="p-3 pt-0 text-sm text-slate-300 space-y-2">
+            <p>Es la cantidad total de magnetismo que circula por un circuito magnético (como el núcleo de un motor).</p>
+            <p><span className="text-primary-400 font-medium">Unidad:</span> Weber (Wb).</p>
+            <p><span className="text-emerald-400 font-medium">Concepto clave:</span> Es el equivalente a la Corriente Eléctrica (I).</p>
+          </div>
+        </details>
+
+        {/* Item 5 */}
+        <details className="group border border-white/5 bg-slate-900/40 rounded-xl overflow-hidden cursor-pointer">
+          <summary className="font-semibold text-white p-3 flex justify-between items-center group-hover:bg-white/5 transition-colors">
+            5. Fuerza Magnetomotriz (FMM)
+            <span className="text-primary-500 group-open:rotate-180 transition-transform text-xs">▼</span>
+          </summary>
+          <div className="p-3 pt-0 text-sm text-slate-300 space-y-2">
+            <p>Es la capacidad de una bobina para producir flujo magnético. Se calcula multiplicando el número de espiras (N) por la corriente (I).</p>
+            <p><span className="text-indigo-400 font-medium">Fórmula:</span> <code className="bg-slate-800 px-1 rounded">FMM = N · I</code></p>
+            <p><span className="text-primary-400 font-medium">Unidad:</span> Amperio-vuelta (Av).</p>
+            <p><span className="text-emerald-400 font-medium">Concepto clave:</span> Es el equivalente al Voltaje (V).</p>
+          </div>
+        </details>
+
+        {/* Item 6 */}
+        <details className="group border border-white/5 bg-slate-900/40 rounded-xl overflow-hidden cursor-pointer">
+          <summary className="font-semibold text-white p-3 flex justify-between items-center group-hover:bg-white/5 transition-colors">
+            6. Reluctancia (ℛ)
+            <span className="text-primary-500 group-open:rotate-180 transition-transform text-xs">▼</span>
+          </summary>
+          <div className="p-3 pt-0 text-sm text-slate-300 space-y-2">
+            <p>Es la oposición que presenta un material al paso del flujo magnético. Un entrehierro (aire entre estator y rotor) tiene una reluctancia muy alta.</p>
+            <div className="space-y-1">
+              <span className="text-indigo-400 font-medium">Fórmula (Ley de Ohm Magnética):</span>
+              <p className="bg-slate-800 p-2 rounded text-center my-1"><code className="text-primary-300">FMM = Φ · ℛ</code></p>
+            </div>
+            <p><span className="text-emerald-400 font-medium">Concepto clave:</span> Es el equivalente a la Resistencia Eléctrica (R).</p>
+          </div>
+        </details>
+
+        {/* Item 7 */}
+        <details className="group border border-white/5 bg-slate-900/40 rounded-xl overflow-hidden cursor-pointer">
+          <summary className="font-semibold text-white p-3 flex justify-between items-center group-hover:bg-white/5 transition-colors">
+            7. Ley de Faraday (Inducción)
+            <span className="text-primary-500 group-open:rotate-180 transition-transform text-xs">▼</span>
+          </summary>
+          <div className="p-3 pt-0 text-sm text-slate-300 space-y-2">
+            <p>Explica cómo un campo magnético que cambia en el tiempo genera electricidad. Es la base de los generadores y transformadores.</p>
+            <div className="space-y-1">
+              <span className="text-indigo-400 font-medium">Fórmula:</span>
+              <p className="bg-slate-800 p-2 rounded text-center my-1"><code className="text-primary-300">ε = -dΦ/dt</code></p>
+            </div>
+            <p><span className="text-emerald-400 font-medium">Concepto clave:</span> Si mueves un imán cerca de un cable, generas voltaje (ε).</p>
+          </div>
+        </details>
+
+        {/* Item 8 */}
+        <details className="group border border-white/5 bg-slate-900/40 rounded-xl overflow-hidden cursor-pointer">
+          <summary className="font-semibold text-white p-3 flex justify-between items-center group-hover:bg-white/5 transition-colors">
+            8. Fuerza de Lorentz (F)
+            <span className="text-primary-500 group-open:rotate-180 transition-transform text-xs">▼</span>
+          </summary>
+          <div className="p-3 pt-0 text-sm text-slate-300 space-y-2">
+            <p>Explica por qué gira un motor. Es la fuerza que siente un cable con corriente cuando está dentro de un campo magnético.</p>
+            <div className="space-y-1">
+              <span className="text-indigo-400 font-medium">Fórmula:</span>
+              <p className="bg-slate-800 p-2 rounded text-center my-1"><code className="text-primary-300">F = q(v × B)</code></p>
+              <p className="text-xs text-center">o simplificado para cables:</p>
+              <p className="bg-slate-800 p-2 rounded text-center my-1"><code className="text-primary-300">F = B · I · L · sen(θ)</code></p>
+            </div>
+            <p><span className="text-emerald-400 font-medium">Concepto clave:</span> Corriente + Magnetismo = Movimiento.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  );
+
   return (
     <TopicLayout
       title="Magnetismo"
       objective="Desarrollar de manera exhaustiva el tema del magnetismo, con énfasis en conceptos, teorías, comportamiento de materiales y su relevancia en el mantenimiento de máquinas eléctricas."
       onBack={onBack}
+      aside={glossaryAside}
       calloutTitle="Introducción"
       calloutText="El magnetismo es un fenómeno físico fundamental que forma parte integral de la comprensión y operación de las máquinas eléctricas contemporáneas. Desde el punto de vista académico y técnico, el estudio del magnetismo constituye el pilar para entender múltiples procesos industriales y tecnológicos."
       calloutBadge="Teoría Fundamental"

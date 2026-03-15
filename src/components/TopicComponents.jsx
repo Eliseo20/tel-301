@@ -52,7 +52,7 @@ export const CollapsibleSection = ({ title, icon: Icon, children, defaultOpen = 
   );
 };
 
-export const TopicLayout = ({ title, objective, unit = "Unidad 1: Fundamentos", onBack, children, calloutTitle, calloutText, calloutBadge }) => {
+export const TopicLayout = ({ title, objective, unit = "Unidad 1: Fundamentos", onBack, children, aside, calloutTitle, calloutText, calloutBadge }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const topics = [
@@ -203,9 +203,18 @@ export const TopicLayout = ({ title, objective, unit = "Unidad 1: Fundamentos", 
         )}
 
         {/* Main Content Area */}
-        <main className="space-y-8">
-          {children}
-        </main>
+        <div className="flex flex-col lg:flex-row gap-8">
+          <main className="flex-1 space-y-8 min-w-0">
+            {children}
+          </main>
+          {aside && (
+            <aside className="lg:w-1/3 xl:w-1/4 shrink-0">
+              <div className="sticky top-8">
+                {aside}
+              </div>
+            </aside>
+          )}
+        </div>
 
         {/* Footer Callout */}
         <footer className="bg-gradient-to-r from-primary-600/20 to-indigo-600/20 p-[1px] rounded-[2.5rem] mt-16 shadow-2xl">
