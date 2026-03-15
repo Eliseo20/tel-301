@@ -17,7 +17,7 @@ const MagnetismoView = ({ onBack }) => {
         {/* Item 1 */}
         <details className="group border border-white/5 bg-slate-900/40 rounded-xl overflow-hidden cursor-pointer" open>
           <summary className="font-semibold text-white p-3 flex justify-between items-center group-hover:bg-white/5 transition-colors">
-            1. Intensidad de Campo Magnético ($H$)
+            1. Intensidad de Campo Magnético (H)
             <span className="text-primary-500 group-open:rotate-180 transition-transform text-xs">▼</span>
           </summary>
           <div className="p-3 pt-0 text-sm text-slate-300 space-y-2">
@@ -30,7 +30,7 @@ const MagnetismoView = ({ onBack }) => {
         {/* Item 2 */}
         <details className="group border border-white/5 bg-slate-900/40 rounded-xl overflow-hidden cursor-pointer">
           <summary className="font-semibold text-white p-3 flex justify-between items-center group-hover:bg-white/5 transition-colors">
-            2. Densidad de Flujo Magnético ($B$)
+            2. Densidad de Flujo Magnético (B)
             <span className="text-primary-500 group-open:rotate-180 transition-transform text-xs">▼</span>
           </summary>
           <div className="p-3 pt-0 text-sm text-slate-300 space-y-2">
