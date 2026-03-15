@@ -333,9 +333,21 @@ const MagnetismoView = ({ onBack }) => {
           <div className="bg-slate-800/50 p-4 rounded-lg my-4 text-center">
             <code className="text-primary-300 text-lg">ε = -dΦ/dt</code>
           </div>
-          <p className="text-slate-300 leading-relaxed text-lg text-justify">
+          <p className="text-slate-300 leading-relaxed text-lg text-justify mb-4">
             Donde ε es la fuerza electromotriz inducida y Φ es el flujo magnético igual a la integral de B sobre el área considerada.
           </p>
+          <div className="w-full flex justify-center my-8">
+            <iframe 
+              width="560" 
+              height="315" 
+              src="https://www.youtube.com/embed/nZjNWgRmIdY" 
+              title="YouTube video player" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowFullScreen
+              className="rounded-xl shadow-lg border border-slate-700 max-w-full"
+            ></iframe>
+          </div>
           <p className="text-slate-300 leading-relaxed text-lg text-justify">
             Este principio tiene aplicaciones cruciales en generadores y transformadores, y también en sistemas de protección y medición eléctricos.
           </p>
