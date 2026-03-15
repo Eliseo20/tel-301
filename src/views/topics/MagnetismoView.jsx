@@ -121,9 +121,21 @@ const MagnetismoView = ({ onBack }) => {
           <div className="bg-slate-800/50 p-4 rounded-lg my-4 text-center">
             <code className="text-primary-300 text-lg">∮ B · dl = μ₀ I_enc</code>
           </div>
-          <p className="text-slate-300 leading-relaxed text-lg text-justify">
+          <p className="text-slate-300 leading-relaxed text-lg text-justify mb-4">
             Esta ley es fundamental para el cálculo de campos magnéticos en máquinas eléctricas, ya que permite diseñar y analizar dispositivos tales como motores y generadores.
           </p>
+          <div className="w-full flex justify-center my-8">
+            <iframe 
+              width="560" 
+              height="315" 
+              src="https://www.youtube.com/embed/2sS6Dm53zPw" 
+              title="YouTube video player" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowFullScreen
+              className="rounded-xl shadow-lg border border-slate-700 max-w-full"
+            ></iframe>
+          </div>
         </div>
       </CollapsibleSection>
 
