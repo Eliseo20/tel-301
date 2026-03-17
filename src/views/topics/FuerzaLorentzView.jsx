@@ -37,7 +37,7 @@ const FuerzaLorentzView = ({ onBack }) => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="p-6 bg-primary-600/10 border-l-4 border-primary-500 rounded-r-2xl">
-                <h3 className="text-white font-bold mb-2">Regla de la Mano Derecha</h3>
+                <h3 className="text-white font-bold mb-2">Regla de la Mano Izquierda</h3>
                 <p className="text-slate-300 leading-relaxed text-justify">
                    Como técnicos, usamos esta regla para visualizar la dirección de la fuerza. En un motor, los conductores del rotor están inmersos en el campo del estator; la fuerza de Lorentz empuja estos conductores, creando el torque.
                 </p>
