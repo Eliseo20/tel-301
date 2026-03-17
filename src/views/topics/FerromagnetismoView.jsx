@@ -111,6 +111,61 @@ const FerromagnetismoView = ({ onBack }) => {
           </div>
         </div>
       </CollapsibleSection>
+
+      {/* 5. Aplicación Industrial: Calentamiento por Histéresis */}
+      <CollapsibleSection title="Aplicación Industrial: Calentamiento por Histéresis" icon={Activity}>
+        <div className="space-y-6">
+          <p className="text-slate-300 leading-relaxed text-lg text-justify">
+            Si bien en el diseño de máquinas eléctricas rotativas y transformadores la histéresis se considera una pérdida de energía indeseable, en la ingeniería de procesos térmicos este fenómeno se aprovecha deliberadamente. El <span className="text-primary-400 font-bold">calentamiento por inducción</span> utiliza la fricción molecular interna, provocada por la rápida inversión de los dominios magnéticos bajo un campo de alta frecuencia, para elevar la temperatura de metales ferromagnéticos con una precisión y velocidad excepcionales.
+          </p>
+
+          <div className="p-6 bg-primary-500/5 rounded-2xl border border-primary-500/20">
+            <p className="text-slate-300 leading-relaxed text-justify italic">
+              "Desde una perspectiva termodinámica, el calor generado es proporcional al área encerrada por el ciclo de histéresis del material y a la frecuencia de la corriente aplicada. Este principio permite realizar tratamientos térmicos localizados como el templado, la soldadura por inducción y la fusión de metales en atmósferas controladas."
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-4">
+              <h3 className="text-white font-bold flex items-center gap-2">
+                <Zap className="w-5 h-5 text-yellow-400" /> Proceso de Inducción
+              </h3>
+              <div className="aspect-video w-full">
+                <iframe 
+                  width="100%" 
+                  height="100%" 
+                  src="https://www.youtube.com/embed/ax2aVsEivs0" 
+                  title="YouTube video player" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowFullScreen
+                  className="rounded-xl shadow-lg border border-white/10"
+                ></iframe>
+              </div>
+              <p className="text-xs text-slate-500 text-center italic">Representación de la inducción de calor.</p>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-white font-bold flex items-center gap-2">
+                <Activity className="w-5 h-5 text-primary-400" /> Demostración Práctica (Short)
+              </h3>
+              <div className="aspect-[9/16] max-w-[300px] mx-auto w-full">
+                <iframe 
+                  width="100%" 
+                  height="100%" 
+                  src="https://www.youtube.com/embed/4vrpQYZQL1w" 
+                  title="YouTube video player" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowFullScreen
+                  className="rounded-xl shadow-lg border border-white/10"
+                ></iframe>
+              </div>
+              <p className="text-xs text-slate-500 text-center italic">Efecto térmico inmediato en metales.</p>
+            </div>
+          </div>
+        </div>
+      </CollapsibleSection>
     </TopicLayout>
   );
 };
