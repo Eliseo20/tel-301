@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ChevronDown, ChevronRight, ImageIcon, Menu, X, Magnet } from 'lucide-react';
 
-export const TechnicalImage = ({ src, alt, title, id, height = "h-auto" }) => (
-  <div className="w-full bg-slate-900/40 rounded-3xl overflow-hidden border border-white/5 mt-4 mb-2 group">
-    <div className={`relative ${height} flex items-center justify-center bg-slate-900/20 px-4 py-8`}>
+export const TechnicalImage = ({ src, alt, title, id, height = "min-h-[300px] max-h-[600px]" }) => (
+  <div className="w-full bg-slate-900/40 rounded-3xl overflow-hidden border border-white/5 my-12 group shadow-2xl">
+    <div className={`relative ${height} flex items-center justify-center bg-slate-950/20 px-8 py-10`}>
       <img 
         src={src} 
         alt={alt} 
-        className="max-w-full max-h-[400px] w-auto h-auto object-contain transition-transform duration-700 group-hover:scale-105" 
+        className="max-w-full max-h-full w-auto h-auto object-contain transition-all duration-700 group-hover:scale-[1.02] shadow-[0_0_50px_rgba(0,0,0,0.5)] rounded-lg" 
       />
-      <div className="absolute top-4 right-4 bg-slate-950/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 shadow-lg">
+      <div className="absolute top-4 right-4 bg-slate-950/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 shadow-lg z-10">
         <p className="text-[10px] text-primary-400 font-mono tracking-tighter uppercase">{id}</p>
       </div>
     </div>
