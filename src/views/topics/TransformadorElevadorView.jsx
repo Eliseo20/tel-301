@@ -25,7 +25,7 @@ const TransformadorElevadorView = ({ onBack }) => {
       <CollapsibleSection title="Relación de Transformación y Aislamiento" icon={TrendingUp}>
         <div className="space-y-6">
           <p className="text-slate-300 leading-relaxed text-lg text-justify">
-            En un transformador elevador, el número de espiras del secundario ($N_s$) es mucho mayor que el del primario ($N_p$). La relación de transformación ($a = N_p / N_s$) es menor a 1. Desde el punto de vista del técnico de mantenimiento, el desafío aquí es el estrés dieléctrico. Al elevar el voltaje, el campo eléctrico intenta perforar cualquier impureza en el aceite o el papel.
+            En un transformador elevador, el número de espiras del secundario (Ns) es mucho mayor que el del primario (Np). La relación de transformación (a = Np / Ns) es menor a 1. Desde el punto de vista del técnico de mantenimiento, el desafío aquí es el estrés dieléctrico. Al elevar el voltaje, el campo eléctrico intenta perforar cualquier impureza en el aceite o el papel.
           </p>
           <p className="text-slate-300 leading-relaxed text-lg text-justify">
             Un problema típico detectado por los técnicos en estos equipos son las descargas parciales. Son pequeñas chispas internas que no llegan a ser un cortocircuito, pero que carbonizan el aceite lentamente. Si un técnico nota que el gasómetro del transformador elevador (relé Buchholz) está acumulando gases, debe realizar un análisis de gases disueltos (DGA) inmediatamente, ya que es la primera señal de que el aislamiento de alta tensión está fallando.
